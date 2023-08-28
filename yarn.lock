@@ -2693,6 +2693,7 @@ __metadata:
     "@storybook/react": "npm:^7.3.2"
     "@storybook/react-webpack5": "npm:^7.3.2"
     "@storybook/testing-library": "npm:^0.2.0"
+    "@szhsin/react-menu": "npm:^4.0.3"
     "@types/babel__core": "npm:^7"
     "@types/babel__preset-env": "npm:^7"
     "@types/css-modules": "npm:^1.0.2"
@@ -3890,6 +3891,19 @@ __metadata:
   version: 0.1.3
   resolution: "@swc/types@npm:0.1.3"
   checksum: 105b4d4431f32f6213da523e0333d31a54b31f7a60f959c67a5a79bc418dcb50cfd5e0b23fc9ff891efb0c7f5599f63d9860a6cbe6c58bfdea1d828b0dfdffde
+  languageName: node
+  linkType: hard
+
+"@szhsin/react-menu@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "@szhsin/react-menu@npm:4.0.3"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+    react-transition-state: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  checksum: 776e42ca26e4a6b2ed1ba7857cb53c92336606fc781de27d75eb3db8fa3bd4db87cbb6acf416bb4572f5e0c00b6a8ed71c56e770b3c7baf2fa671a7edb849c54
   languageName: node
   linkType: hard
 
@@ -10421,6 +10435,16 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 80c58fd6aac3594e351e2e7b048d8a5b09508adb21031a38b3c40911fe58295572eddc640d4b20a7be364842c8ed1120fe30097e22ea055316b375b88d4ff02a
+  languageName: node
+  linkType: hard
+
+"react-transition-state@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "react-transition-state@npm:2.1.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 992f6a44070c74bdcbeae4f6a2a5dd2429ab031e74a942822f9f2bd40b938e0efcdfbc0736f3f1a1003399191de9e5659397e99b4e901600cd03cc639579da54
   languageName: node
   linkType: hard
 

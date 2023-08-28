@@ -52,5 +52,8 @@
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@szhsin/react-menu": "^4.0.3"
   }
 }
