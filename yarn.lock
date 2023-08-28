@@ -2672,9 +2672,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sandercamp/ui-components-test@workspace:.":
+"@sandercamp/ui-components@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@sandercamp/ui-components-test@workspace:."
+  resolution: "@sandercamp/ui-components@workspace:."
   dependencies:
     "@babel/core": "npm:^7.22.11"
     "@babel/preset-env": "npm:^7.22.10"
@@ -2711,8 +2711,6 @@ __metadata:
     rollup-plugin-postcss: "npm:^4.0.2"
     storybook: "npm:^7.3.2"
     typescript: "npm:^5.2.2"
-  peerDependencies:
-    react: ^18.2.0
   languageName: unknown
   linkType: soft
 

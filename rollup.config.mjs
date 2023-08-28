@@ -6,7 +6,7 @@ import pkg from "./package.json" assert { type: "json" };
 export default {
     input: "src/index.ts",
     output: {
-        dir: "dist",
+        dir: "lib",
         sourcemap: true,
         format: "cjs"
     },
