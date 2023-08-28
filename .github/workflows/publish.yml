@@ -17,6 +17,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           scope: '@sandercamp'
+      - run: echo ${{secrets.NODE_AUTH_TOKEN}}
       - run: yarn
       - run: yarn npm publish --access public
         env:
