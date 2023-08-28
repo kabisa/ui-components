@@ -6,14 +6,27 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
+                test: /\.css$/i,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                        },
+                    },
+                ],
             },
+            {
+                test: /\.tsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            }
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', ],
     },
     output: {
         filename: 'main.js',

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "esModuleInterop": true,
-    "strict": true,
+    "strict": false,
     "jsx": "react",
     "module": "ESNext",
     "declaration": true,
@@ -12,12 +12,15 @@
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "noEmitOnError": false
   },
   "exclude": [
     "dist",
     "node_modules",
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
-  ]
+  ],
+  "include": ["src/**/*"]
 }
