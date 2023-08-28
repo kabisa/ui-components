@@ -1,6 +1,8 @@
 {
   "name": "@sandercamp/ui-components",
-  "version": "0.0.3",
+  "author": "Sander Camp",
+  "license": "MIT",
+  "version": "0.0.4",
   "packageManager": "yarn@4.0.0-rc.50",
   "main": "./lib/index.js",
   "exports": {
@@ -10,8 +12,6 @@
     "lib/**/*",
     "src/**/*"
   ],
-  "author": "Sander Camp",
-  "license": "MIT",
   "dependencies": {
     "@storybook/addon-docs": "^7.3.2",
     "@storybook/addon-essentials": "^7.3.2",
