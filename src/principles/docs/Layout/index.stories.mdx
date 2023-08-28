@@ -1,0 +1,74 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import MarginPadding from "./MarginPadding";
+import Radius from "./Radius";
+
+<Meta title="Principles/Layout"/>
+
+# Layout
+
+<br/><br/>
+
+## Margin and padding
+
+Use the sliders to see an example of the different margin and padding levels.
+
+export const Template = args => <MarginPadding { ...args } />;
+export const RadiusTemplate = args => <Radius { ...args } />;
+
+<Canvas
+    withToolbar
+>
+    <Story
+        name="Margin and padding"
+        argTypes={
+            {
+                margin: {
+                    control: {
+                        type: "range",
+                        min: 1,
+                        max: 5
+                    }
+                },
+                padding: {
+                    control: {
+                        type: "range",
+                        min: 1,
+                        max: 5
+                    }
+                }
+            }
+        }
+        args={ { margin: 3, padding: 3 } }
+    >
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+<ArgsTable story={ "Margin and padding" } />
+
+## Radius
+
+<Canvas
+    withToolbar
+>
+    <Story
+        name="Radius"
+        argTypes={
+            {
+                level: {
+                    control: {
+                        type: "range",
+                        min: 1,
+                        max: 5
+                    }
+                }
+            }
+        }
+        args={ { level: 1 } }
+    >
+        { Radius.bind({}) }
+    </Story>
+</Canvas>
+
+<ArgsTable story={ "Radius" } />

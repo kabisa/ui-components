@@ -1,0 +1,80 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Example from "./Example";
+import Playground from "./Playground";
+
+<Meta title="Principles/Iconography" />
+
+# Iconography
+
+Uses [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols), a variable font containing over 2500 glyphs that can easily be styled and scaled.
+
+<br/><br/>
+
+export const ExampleTemplate = args => <Example { ...args } />;
+export const PlayGroundTemplate = args => <Playground { ...args } />;
+
+## Examples
+
+<Canvas
+    withToolbar
+>
+    <Story
+        name="Example"
+    >
+        { ExampleTemplate.bind({}) }
+    </Story>
+</Canvas>
+
+## Playground
+
+<Canvas
+    withToolbar
+>
+    <Story
+        name="Playground"
+        args={
+            {
+                name: 'delete',
+                fill: true,
+                fontWeight: '--font-weight-regular',
+                fontSize: '--font-size-l',
+                color:'--font-color-1'
+            }
+        }
+        argTypes={
+            {
+                name: {
+                    description: 'Name of the icon. See [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) for all possible options'
+                },
+                fill: {
+                    description: 'Whether the icon should be filled or not'
+                },
+                color: {
+                    description: 'Color of the icon',
+                    control: {
+                        type: 'select',
+                        options: ['--font-color-1', '--font-color-2', '--font-color-3'],
+                    },
+                },
+                fontWeight: {
+                    description: '',
+                     control: {
+                        type: 'select',
+                        options: ['--font-weight-thin', '--font-weight-light', '--font-weight-regular', '--font-weight-medium', '--font-weight-bold'],
+                    },
+                },
+                fontSize: {
+                    control: {
+                        type: 'select',
+                        options: ['--font-size-xs', '--font-size-s', '--font-size-m', '--font-size-l', '--font-size-xl'],
+                    },
+                },
+            }
+        }
+    >
+        { PlayGroundTemplate.bind({}) }
+    </Story>
+</Canvas>
+
+<ArgsTable story={ "Playground" } />

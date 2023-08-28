@@ -1,0 +1,16 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-level-1);
+
+  text-indent: var(--spacing-level-2);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family);
+  color: var(--font-color-1);
+
+  opacity: 65%;
+}
+
+.disabled {
+  opacity: 40%;
+}

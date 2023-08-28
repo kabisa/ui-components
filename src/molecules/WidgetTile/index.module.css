@@ -1,0 +1,17 @@
+.widget-tile {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-level-5);
+
+
+
+    font-size: var(--font-size-s);
+}
+
+.widget-tile > * {
+    font-size: var(--font-size-l);
+}
+
+.empty {
+    opacity: 65%;
+}

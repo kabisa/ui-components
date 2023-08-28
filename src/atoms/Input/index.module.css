@@ -1,0 +1,32 @@
+.input {
+    border: .1rem solid var(--subtle-color);
+    border-radius: var(--radii-level-1);
+    padding: var(--padding-level-2) var(--padding-level-3);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+}
+
+.input:disabled {
+    cursor: not-allowed;
+    opacity: 40%;
+}
+
+.input:focus {
+    outline: none;
+
+    border: .1rem solid var(--outline-color);
+}
+
+.input:user-invalid,
+.input.error {
+    border: .1rem solid var(--error-color);
+}
+
+.input[type="radio"] {
+    accent-color: var(--brand-color-1);
+}
+
+.input[type="radio"]:focus {
+    accent-color: var(--brand-color-2);
+}

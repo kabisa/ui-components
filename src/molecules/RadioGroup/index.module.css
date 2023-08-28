@@ -1,0 +1,65 @@
+:root {
+    --input-diameter: .75rem;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.group > legend {
+    font-size: var(--font-size-xs);
+    font-family: var(--font-family);
+    color: var(--font-color-1);
+
+    opacity: 65%;
+}
+
+.group > label {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 0 0 calc(var(--input-diameter) + var(--padding-level-3));
+    margin: var(--margin-level-2) 0 0 0;
+
+    font-size: var(--font-size-s);
+
+    opacity: 100%;
+}
+
+.group > label > input {
+    position: absolute;
+
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+}
+
+.group > label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    cursor: pointer;
+
+    border: .1rem solid var(--brand-color-1);
+    border-radius: 50%;
+    width: var(--input-diameter);
+    height: var(--input-diameter);
+}
+
+.group > label.checked:before {
+    background: var(--brand-color-2);
+    border-color: var(--brand-color-2);
+}

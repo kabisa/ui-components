@@ -1,0 +1,12 @@
+.icon-button {
+    padding: var(--padding-level-2) var(--padding-level-3);
+}
+
+.icon {
+    display: block;
+    background: inherit;
+
+    font-size: var(--font-size-l);
+    color: inherit;
+}
+

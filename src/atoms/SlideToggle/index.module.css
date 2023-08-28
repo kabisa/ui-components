@@ -1,0 +1,49 @@
+@import url("../../principles/index.module.css");
+
+.slideToggle {
+  display: inline-block;
+  appearance: none;
+  height: 1.5rem;
+  aspect-ratio: 2/1;
+  background-color: #0001;
+  box-shadow: inset 2px 2px 2px #0004;
+  border: none;
+  border-radius: var(--radii-pill);
+  margin: 0;
+  padding: 0;
+  width: 3rem;
+
+  cursor: pointer;
+
+  transition: background-color 200ms ease-in-out;
+}
+
+.slideToggle:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+.slideToggle:focus {
+  outline: var(--outline-color) solid 1px;
+  border: none;
+}
+
+.slideToggle::before {
+  display: inline-block;
+  content: "";
+  height: 1.25rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: var(--margin-level-1);
+  box-shadow: var(--shadow-level-1);
+  background: #fff;
+  transition: transform 200ms ease-in-out;
+}
+
+.slideToggle:checked {
+  background-color: var(--brand-color-1);
+}
+
+.slideToggle:checked::before {
+  transform: translateX(1.5rem);
+}

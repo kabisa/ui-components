@@ -1,0 +1,15 @@
+.tile {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: box-shadow 500ms ease-in;
+
+    padding: var(--padding-level-5);
+
+    background: var(--bg-color-1);
+
+    font-family: var(--font-family);
+}

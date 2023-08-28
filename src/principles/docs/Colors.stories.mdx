@@ -1,0 +1,65 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+import '../colors.module.css';
+
+import { getCSSPropertyValue } from "../../utils";
+
+<Meta title="Principles/Colors" />
+
+# Color palette
+
+<br/><br/>
+
+## Principles
+
+* Kabisa look and feel
+* High contrast
+* Consistency
+
+## Colors
+
+<br/>
+
+<ColorPalette>
+    <ColorItem
+        title="Brand"
+        subtitle={ 'Brand colors'}
+        colors={
+            {
+                'brand-color-1': getCSSPropertyValue('--brand-color-1'),
+                'brand-color-2': getCSSPropertyValue('--brand-color-2'),
+                'brand-color-3': getCSSPropertyValue('--brand-color-3'),
+            }
+        }
+    />
+    <ColorItem
+        title="Background"
+        subtitle="Background colors"
+        colors={
+            {
+                'bg-color-1': getCSSPropertyValue('--bg-color-1'),
+                'bg-color-2': getCSSPropertyValue('--bg-color-2')
+            }
+        }
+    />
+    <ColorItem
+        title="Typography"
+        subtitle="Font colors"
+        colors={
+            {
+                'font-color-1': getCSSPropertyValue('--font-color-1'),
+                'font-color-2': getCSSPropertyValue('--font-color-2')
+            }
+        }
+    />
+    <ColorItem
+        title="Miscellaneous"
+        colors={
+            {
+                'error-color': getCSSPropertyValue('--error-color'),
+                'outline-color': getCSSPropertyValue('--outline-color'),
+                'subtle-color': getCSSPropertyValue('--subtle-color')
+            }
+        }
+    />
+</ColorPalette>

@@ -1,0 +1,17 @@
+.tileList {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: var(--margin-level-3);
+    box-shadow: var(--shadow-level-1);
+    border-radius: var(--radii-level-1);
+    padding: 0;
+
+    overflow-y: auto;
+}
+
+.tileList > li:not(:first-child) {
+    border-top: .1rem solid var(--subtle-color);
+}

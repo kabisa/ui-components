@@ -1,0 +1,18 @@
+:root {
+    --base-color: #ffffff;
+
+    --brand-color-1: #18242b;
+    --brand-color-2: #17c77f;
+    --brand-color-3: #bfdbcf;
+
+    --bg-color-1: var(--base-color);
+    --bg-color-2: var(--brand-color-1);
+
+    --font-color-1: var(--brand-color-1);
+    --font-color-2: var(--base-color);
+    --font-color-3: var(--brand-color-2);
+
+    --outline-color: #66f;
+    --error-color: #f44336;
+    --subtle-color: #e6e6e6;
+}

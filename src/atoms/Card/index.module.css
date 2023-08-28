@@ -1,0 +1,14 @@
+@import url("../../principles/index.module.css");
+
+.card {
+  box-shadow: var(--shadow-level-1);
+  border-radius: var(--radii-level-1);
+  padding: var(--padding-level-5);
+
+  background: var(--base-color);
+
+  font-family: var(--font-family); /** TODO: Should inherit */
+  color: var(--font-color-1);
+}
+
+/** TODO: On hover transform shadow? */

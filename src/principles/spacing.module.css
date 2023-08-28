@@ -1,0 +1,19 @@
+:root {
+    --spacing-level-1: 0.125rem;
+    --spacing-level-2: 0.25rem;
+    --spacing-level-3: 0.5rem;
+    --spacing-level-4: 0.75rem;
+    --spacing-level-5: 1rem;
+
+    --margin-level-1: 0.125rem;
+    --margin-level-2: 0.25rem;
+    --margin-level-3: 0.5rem;
+    --margin-level-4: 0.75rem;
+    --margin-level-5: 1rem;
+
+    --padding-level-1: 0.125rem;
+    --padding-level-2: 0.25rem;
+    --padding-level-3: 0.5rem;
+    --padding-level-4: 0.75rem;
+    --padding-level-5: 1rem;
+}

@@ -1,0 +1,21 @@
+@import url("../../../icons.css");
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    font-size: 2rem;
+}
+
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.text {
+    font-size: var(--font-size-s);
+}

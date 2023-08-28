@@ -1,0 +1,7 @@
+@import url("../../../icons.css");
+
+.playground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

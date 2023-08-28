@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ol {
+    margin: 0;
+    padding: var(--padding-level-3);
+    display: flex;
+    list-style: none;
+}
+
+.horizontal ol {
+    flex-direction: row;
+}
+
+.horizontal ol > * + * {
+    border-left: 2px solid var(--brand-color-2);
+}
+
+.horizontal ol > * {
+    padding: 0 var(--padding-level-5);
+}
+
+.horizontal ol > *:first-child {
+    padding-left: 0;
+}
+
+.horizontal ol > *:last-child {
+    padding-right: 0;
+}
+
+.vertical ol {
+    flex-direction: column;
+    gap: var(--spacing-level-3);
+}
+
+.vertical ol > * {
+    border-left: 2px solid var(--brand-color-2);
+    padding-left: var(--padding-level-5);
+}

@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Canvas, Story, ArgsTable } from "@storybook/addon-docs";
+
+import '../../typography.module.css';
+
+import FontSize from "./FontSize";
+import FontWeight from "./FontWeight";
+import Playground from "./Playground";
+
+export const FontSizeTemplate = args => <FontSize { ...args } />;
+export const FontWeightTemplate = args => <FontWeight { ...args } />;
+export const PlayGroundTemplate = args => <Playground { ...args } />;
+
+<Meta title="Principles/Typography" />
+
+# Typography
+
+<br/><br/>
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+## Font family
+
+Poppins ([Google Fonts](https://fonts.google.com/specimen/Poppins))
+
+## Font size
+
+<Canvas withToolbar>
+    <Story
+        name="Font size"
+        args={
+            {
+                fontSizes: ['xs', 's', 'm', 'l', 'xl'],
+                sampleText: SampleText,
+            }
+        }
+    >
+        { FontSizeTemplate.bind({}) }
+    </Story>
+</Canvas>
+
+## Font weight
+
+<Canvas withToolbar>
+    <Story
+        name="Font weight"
+        args={
+            {
+                fontWeights: ['thin', 'light', 'regular', 'medium', 'bold'],
+                sampleText: SampleText,
+            }
+        }
+    >
+        { FontWeightTemplate.bind({}) }
+    </Story>
+</Canvas>
+
+## Playground
+
+<Canvas withToolbar>
+    <Story
+        name="Playground"
+        args={
+            {
+                fontWeight: ['regular'],
+                fontSize: ['m'],
+                sampleText: SampleText,
+            }
+        }
+        argTypes={
+            {
+                fontWeight: {
+                    control: {
+                        type: 'select',
+                        options: ['thin', 'light', 'regular', 'medium', 'bold'],
+                    },
+                },
+                fontSize: {
+                    control: {
+                        type: 'select',
+                        options: ['xs', 's', 'm', 'l', 'xl'],
+                    },
+                },
+            }
+        }
+    >
+        { PlayGroundTemplate.bind({}) }
+    </Story>
+</Canvas>
+
+<ArgsTable story={ "Playground" } />

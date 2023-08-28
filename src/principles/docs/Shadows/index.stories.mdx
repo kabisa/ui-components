@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import BoxShadow from "./BoxShadow";
+
+<Meta title="Principles/Shadow"/>
+
+# Shadows
+
+<br/><br/>
+
+## Principles
+
+Use shadows to simulate depth and elevation
+
+### Box Shadows
+
+Use the sliders to see an example of the different shadow levels.
+
+export const Template = args => <BoxShadow { ...args } />;
+
+<Canvas
+    withToolbar
+>
+    <Story
+        name="Box Shadow"
+        argTypes={
+            {
+                level: {
+                    control: {
+                        type: "range",
+                        min: 1,
+                        max: 5
+                    }
+                }
+            }
+        }
+        args={ { level: 1 } }
+    >
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+<ArgsTable story={ "Box Shadow" } />

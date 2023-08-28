@@ -1,0 +1,9 @@
+:root {
+  --radii-level-1: 0.25rem;
+  --radii-level-2: 0.5rem;
+  --radii-level-3: 0.75rem;
+  --radii-level-4: 1rem;
+  --radii-level-5: 1.5rem;
+
+  --radii-pill: 50% / 100%; /** No need to define it as a system variable? */
+}

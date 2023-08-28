@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.radiusContainer {
+    width: fit-content;
+    padding: 2rem;
+
+    background: orange;
+}
+
+.valueContainer {
+    background: white;
+    display: flex;
+    align-items: center;
+
+    height: 3rem;
+
+    padding: .75rem;
+}

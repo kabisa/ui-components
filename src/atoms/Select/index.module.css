@@ -1,0 +1,24 @@
+.select {
+    border: .1rem solid var(--subtle-color);
+    border-radius: var(--radii-level-1);
+    padding: var(--padding-level-2) var(--padding-level-3);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+}
+
+.select:disabled {
+    cursor: not-allowed;
+    opacity: 40%;
+}
+
+.select:focus {
+    outline: none;
+
+    border: .1rem solid var(--outline-color);
+}
+
+.select:user-invalid,
+.select.error {
+    border: .1rem solid var(--error-color);
+}
