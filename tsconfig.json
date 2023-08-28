@@ -11,9 +11,7 @@
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
-    "noEmitOnError": false
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": [
     "dist",
@@ -21,5 +19,5 @@
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
   ],
-  "include": ["src/**/*", "declations.d.ts"]
+  "include": ["src/**/*"]
 }

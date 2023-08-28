@@ -7,7 +7,7 @@ export default {
     input: "src/index.ts",
     output: {
         dir: "dist",
-        sourcemap: true,  // We want a source map to trace the original code
+        sourcemap: true,
         format: "cjs"
     },
     plugins: [
