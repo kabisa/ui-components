@@ -11,14 +11,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v3
+
+      # Publish to NPMJS
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          scope: '@sandercamp'
-      - run: cat ~/.npmrc
-      - run: yarn
-      - run: yarn npm publish --access public
+      - name: Publish to NPMJS
+        run: |
+          yarn build
+          npm config set //registry.npmjs.org/:_auth=$NODE_AUTH_TOKEN
+          npm config list
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
