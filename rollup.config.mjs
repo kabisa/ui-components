@@ -23,5 +23,5 @@ export default {
             include: ["src/**/*.ts", "src/**/*.tsx"]
         })
     ],
-    external: [...Object.keys(pkg.devDependencies)]
+    external: [...Object.keys(pkg.dependencies)]
 };
