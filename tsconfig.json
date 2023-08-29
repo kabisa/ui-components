@@ -7,11 +7,12 @@
     "module": "ESNext",
     "declaration": true,
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "lib",
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
   },
   "exclude": [
     "dist",

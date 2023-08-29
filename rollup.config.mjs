@@ -1,6 +1,8 @@
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
+import typescript from '@rollup/plugin-typescript';
+import postcssImport from 'postcss-import';
 import pkg from "./package.json" assert { type: "json" };
 
 export default {
@@ -14,8 +16,13 @@ export default {
         resolve({
             extensions: ['.ts', '.tsx'],
         }),
+        typescript({ tsconfig: './tsconfig.json' }),
         postcss({
             modules: true,
+            plugins: [
+                // Inlines @import statements
+                postcssImport()
+            ]
         }),
         babel({
             babelHelpers: "bundled",
