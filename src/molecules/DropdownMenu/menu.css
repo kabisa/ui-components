@@ -1,0 +1,61 @@
+.szh-menu {
+  background-color: var(--bg-color-2);
+  color: var(--base-color);
+}
+
+.szh-menu-button {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding-bottom: var(--padding-level-2);
+  font-family: Poppins, sans-serif;
+  font-size: var(--font-size-s);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  outline: 0;
+  color: var(--base-color);
+  transition: border-color 0.2s cubic-bezier(0.55, 0, 0.1, 1),
+    padding 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.szh-menu-button:hover {
+  border-color: var(--brand-color-2);
+}
+
+.szh-menu-button-bottom::after {
+  content: "\25BE";
+  color: var(--brand-color-2);
+  margin-left: var(--margin-level-3);
+}
+
+.szh-menu-button-top::after {
+  content: "\25BE";
+  color: var(--brand-color-2);
+  margin-left: var(--margin-level-3);
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.szh-menu-button--open.szh-menu-button-bottom::after {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.szh-menu-button--open.szh-menu-button-top::after {
+  display: inline-block;
+  transform: rotate(360deg);
+}
+
+.szh-menu__item {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding-bottom: var(--padding-level-2);
+  font-family: Poppins, sans-serif;
+  font-size: var(--font-size-s);
+  transition: border-color 0.2s cubic-bezier(0.55, 0, 0.1, 1),
+    padding 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.szh-menu__item--hover {
+  border-color: var(--brand-color-2);
+  background-color: transparent;
+}
