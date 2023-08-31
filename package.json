@@ -2,7 +2,7 @@
   "name": "@sandercamp/ui-components",
   "author": "Sander Camp",
   "license": "MIT",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "packageManager": "yarn@4.0.0-rc.50",
   "main": "./lib/index.js",
   "exports": {
@@ -58,7 +58,7 @@
   "scripts": {
     "start": "yarn storybook",
     "build": "rollup -c",
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   }
