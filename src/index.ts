@@ -15,7 +15,7 @@ export { default as RadioGroup } from "./molecules/RadioGroup";
 export { default as SortableList } from "./molecules/SortableList";
 export { default as TileList } from "./molecules/TileList";
 export { default as Navigation } from "./molecules/Navigation";
-export { default as DropdownMenu } from "./molecules/DropdownMenu";
+export * from "./molecules/DropdownMenu";
 
 // Organisms
 export { default as WidgetSelector } from "./organisms/WidgetSelector";

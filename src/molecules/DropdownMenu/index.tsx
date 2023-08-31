@@ -22,7 +22,7 @@ type DropdownMenuProps = PropsWithChildren<{
   direction: "top" | "bottom";
   text: string;
 }> &
-  MenuProps;
+  Omit<MenuProps, "menuButton">;
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
   direction,
