@@ -19,7 +19,6 @@ jobs:
       - name: Publish to NPMJS
         run: |
           yarn build
-          npm config list
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
