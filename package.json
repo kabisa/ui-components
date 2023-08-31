@@ -2,11 +2,12 @@
   "name": "@sandercamp/ui-components",
   "author": "Sander Camp",
   "license": "MIT",
-  "version": "0.0.12",
+  "version": "0.0.16",
   "packageManager": "yarn@4.0.0-rc.50",
   "main": "./lib/index.js",
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./lib/index.js",
+    "./src/": "./src/"
   },
   "files": [
     "lib/**/*",
