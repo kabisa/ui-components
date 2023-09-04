@@ -3,6 +3,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
 import typescript from '@rollup/plugin-typescript';
 import postcssImport from 'postcss-import';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+
 import pkg from "./package.json" assert { type: "json" };
 
 export default {
@@ -13,6 +15,7 @@ export default {
         format: "cjs"
     },
     plugins: [
+        peerDepsExternal(),
         resolve({
             extensions: ['.ts', '.tsx'],
         }),
