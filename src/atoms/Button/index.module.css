@@ -15,19 +15,19 @@
     font-family: var(--font-family);
 }
 
-.button.primary {
+.primary {
     background: var(--brand-color-2);
 
     color: var(--font-color-2);
 }
 
-.button.secondary {
+.secondary {
     background: var(--brand-color-1);
 
     color: var(--font-color-2);
 }
 
-.button.tertiary {
+.tertiary {
     border-color: var(--brand-color-1);
 
     background: transparent;
