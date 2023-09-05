@@ -8,7 +8,6 @@ export default {
   component: Icon,
   args: {
     name: "search",
-    color: "pink",
   },
 } as ComponentMeta<typeof Icon>;
 
