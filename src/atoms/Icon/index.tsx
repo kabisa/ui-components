@@ -17,7 +17,7 @@ const Icon: React.FC<IconProps> = ({ className, name, color, fill = true }) => (
 
       className
     )}
-    style={{ color: color ?? "inherit" }}
+    style={{ color: color }}
   >
     {name}
   </span>
