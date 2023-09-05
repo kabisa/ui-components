@@ -1,6 +1,6 @@
 @import url("../../principles/icons.css");
 
 .icon {
-  background: var(--bg-color-1);
+  background: transparent;
   color: var(--font-color-1);
 }
