@@ -11,7 +11,7 @@ export type IconProps = JSX.IntrinsicElements["span"] & {
 const Icon: React.FC<IconProps> = ({ className, name, fill = true }) => (
   <span
     className={classNames(
-      fill ? "material-symbols-rounded" : " material-symbols-rounded-outlined",
+      fill ? "material-symbols-rounded" : "material-symbols-rounded-outlined",
       styles.icon,
       className
     )}
