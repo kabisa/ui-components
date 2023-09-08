@@ -4,7 +4,6 @@
     appearance: none;
 
     width: max-content;
-    margin: var(--margin-level-1) var(--margin-level-3);
     border: .1rem solid transparent;
     border-radius: var(--radii-level-1);
     padding: var(--padding-level-2) var(--padding-level-5);
