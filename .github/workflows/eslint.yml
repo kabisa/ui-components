@@ -1,0 +1,23 @@
+name: ESLint static analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    name: Run ESLint static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn
+      - name: Run ESLint
+        run: yarn run eslint .
+          --config .eslintrc.json
+          --ext .js,.jsx,.ts,.tsx

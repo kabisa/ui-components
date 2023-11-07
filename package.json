@@ -24,6 +24,7 @@
     "@storybook/react-webpack5": "^7.3.2",
     "@storybook/testing-library": "^0.2.0",
     "@szhsin/react-menu": "^4.0.3",
+    "@typescript-eslint/parser": "^6.10.0",
     "classnames": "^2.3.2",
     "react-movable": "^3.0.4",
     "storybook": "^7.3.2"
