@@ -2016,6 +2016,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.7"
     "@types/rollup-plugin-peer-deps-external": "npm:^2"
     "@typescript-eslint/eslint-plugin": "npm:^6.4.0"
+    "@typescript-eslint/parser": "npm:^6.10.0"
     classnames: "npm:^2.3.2"
     eslint: "npm:^8.0.1"
     eslint-config-prettier: "npm:^9.0.0"
@@ -4532,7 +4533,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^6.4.0":
+"@typescript-eslint/parser@npm:^6.10.0, @typescript-eslint/parser@npm:^6.4.0":
   version: 6.10.0
   resolution: "@typescript-eslint/parser@npm:6.10.0"
   dependencies:
