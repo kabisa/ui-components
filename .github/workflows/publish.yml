@@ -4,6 +4,7 @@
 name: Publish package to npmjs
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
@@ -14,10 +15,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          # node-version 20.6 breaks the build, babel needs to catch up.
-          # https://github.com/angular/angular-cli/issues/25782
-          node-version: "20.5"
           registry-url: https://registry.npmjs.org/
+      - if: ${{ github.event_name == 'workflow_dispatch' }}
+        name: Bump version
+        run: npm version prepatch && git push && git push --tags
       - name: Publish to NPMJS
         run: npm publish --access public
         env:
