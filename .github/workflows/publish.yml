@@ -24,9 +24,9 @@ jobs:
       - if: ${{ github.event_name == 'push' }}
         name: Bump version
         run: |
-          npm version prepatch
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "username@users.noreply.github.com"
+          npm version prepatch
           git push
           git push --tags
       - name: Publish to NPMJS
