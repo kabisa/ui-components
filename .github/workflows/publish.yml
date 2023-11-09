@@ -4,6 +4,7 @@
 name: Publish package to npmjs
 
 on:
+  push:
   workflow_dispatch:
   release:
     types: [created]
@@ -16,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           registry-url: https://registry.npmjs.org/
-      - if: ${{ github.event_name == 'workflow_dispatch' }}
+      - if: ${{ github.event_name == 'push' }}
         name: Bump version
         run: npm version prepatch && git push && git push --tags
       - name: Publish to NPMJS
