@@ -1,55 +1,23 @@
-# Dashboard UI Components
+# Kabisa UI Components
 
-Component set to easily build settings screens.
+UI Component library containing basic components in Kabisa brand styling. This is by no means a fully matured component library, 
+so feel free to contribute!
 
 # Running storybook
 
 ```sh
-yarn storybook
+yarn start
 ```
 
 # Using components from this package
 
-In your project:
+Adding it to your project:
 
 ```sh
-yarn add @dashboard-platform/ui-components
+yarn add @kabisa/ui-components
 ```
-
-In your Widget Settings Renderer:
+Importing components:
 
 ```ts
-import { SlideToggle } from "@dashboard-platform/ui-components";
+import { SlideToggle } from "@kabisa/ui-components";
 ```
-
-# Components / Elements list:
-
-## Done
-
-_Nothing yet_
-
-## Usable, no styling
-
-- Slide Toggle
-
-## Missing
-
-- Label
-- Orderable list
-- List card
-- Select
-
-# How to build components
-
-Most of the components could be simple wrappers around standard HTML components, mainly adding a consistent styling or more easy to use technical interface.
-
-For more complex components please check out if there is a suitable 'headless' component available, that we can style to our needs.
-
-Sites to check out for nice components:
-
-- https://reactjsexample.com/
-
-Some components I really liked and would recommend when needed:
-
-- Tree component: https://github.com/brimdata/react-arborist
-- Menu system: https://szhsin.github.io/react-menu/
