@@ -21,7 +21,6 @@ export default {
         }),
         typescript({ tsconfig: './tsconfig.json' }),
         postcss({
-            inject: false,
             plugins: [
                 // Inlines @import statements
                 postcssImport()
