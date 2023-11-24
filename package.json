@@ -2,7 +2,7 @@
   "name": "@kabisa/ui-components",
   "author": "Sander Camp",
   "license": "MIT",
-  "version": "0.1.4-0",
+  "version": "0.1.5-0",
   "packageManager": "yarn@4.0.0-rc.50",
   "main": "./lib/index.js",
   "exports": {
