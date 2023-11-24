@@ -2,6 +2,7 @@ import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
 import typescript from '@rollup/plugin-typescript';
+import postcssImport from 'postcss-import';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 import pkg from "./package.json" assert { type: "json" };
@@ -20,7 +21,11 @@ export default {
         }),
         typescript({ tsconfig: './tsconfig.json' }),
         postcss({
-            extract: true
+            extract: true,
+            plugins: [
+                // Inlines @import statements
+                postcssImport()
+            ]
         }),
         babel({
             babelHelpers: "bundled",
