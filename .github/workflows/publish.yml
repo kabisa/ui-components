@@ -4,6 +4,7 @@
 name: Publish package to npmjs
 
 on:
+  push:
   workflow_dispatch:
   release:
     types: [created]
@@ -21,8 +22,8 @@ jobs:
         with:
           registry-url: https://registry.npmjs.org/
 
-      # Update the package version automatically when this workflow is triggered manually
-      - if: ${{ github.event_name == 'workflow_dispatch' }}
+      # Update the package version
+      - if: ${{ github.event_name == 'push' }}
         name: Bump version
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
