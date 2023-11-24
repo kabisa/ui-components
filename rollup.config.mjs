@@ -1,6 +1,7 @@
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
+import postcssUrl from "postcss-url"
 import typescript from '@rollup/plugin-typescript';
 import postcssImport from 'postcss-import';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -21,9 +22,14 @@ export default {
         }),
         typescript({ tsconfig: './tsconfig.json' }),
         postcss({
+            extract: true,
             plugins: [
                 // Inlines @import statements
-                postcssImport()
+                postcssImport(),
+                // Inlines assets using base64 encoding
+                postcssUrl({
+                    url: "inline",
+                }),
             ]
         }),
         babel({
