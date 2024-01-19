@@ -4,20 +4,33 @@
 name: Publish package to npmjs
 
 on:
+  push:
+  workflow_dispatch:
   release:
     types: [created]
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      CI_COMMIT_AUTHOR: Continuous Integration
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          # node-version 20.6 breaks the build, babel needs to catch up.
-          # https://github.com/angular/angular-cli/issues/25782
-          node-version: "20.5"
           registry-url: https://registry.npmjs.org/
+
+      # Update the package version
+      - if: ${{ github.event_name == 'push' }}
+        name: Bump version
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "username@users.noreply.github.com"
+          npm version prepatch
+          git push
+          git push --tags
       - name: Publish to NPMJS
         run: npm publish --access public
         env:
